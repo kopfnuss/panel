@@ -25,5 +25,9 @@
   <?php echo js(panel()->urls()->js() . '/apps/main.js?v=' . panel()->version()) ?>
   <script><?php echo form::js(false) ?></script>
 
+  <!-- custom panel scripts -->
+  <?php if($js = kirby()->option('panel.js')): ?>
+    <?php echo js($js) ?>
+  <?php endif ?>
 </body>
 </html>
